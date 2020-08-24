@@ -19,7 +19,7 @@ function mapAction(item) {
   }
   first();
   second();
-  
+
 //Callback function
 
   function greeting(name) {
@@ -32,3 +32,7 @@ function mapAction(item) {
   }
   
   processUserInput(greeting);
+
+
+
+  //concept of event bubble and event delegation

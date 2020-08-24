@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+</head>
+<body>
+    <h1>List Item</h1>
+    <ul>
+        <li>Lorem, ipsum.</li>
+        <li>Quo, cumque.</li>
+        <li onclick="alert('hello return')">Exercitationem, blanditiis.</li>
+        <li onclick="itemClickHandler(event)">Nihil, quasi!</li>
+        <li id="lastName">Et, beatae.</li>
+    </ul>
+
+
+    <script>
+        //multiple ways to set DOM event handler
+
+        function itemClickHandler(event){
+            console.log(event.target.innerText);
+        }
+        document.getElementById("lastName").addEventListener("click", itemClickHandler);
+    </script>
+</body>
+</html>
