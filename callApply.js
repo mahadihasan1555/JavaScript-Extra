@@ -8,8 +8,8 @@ const person = {
     getFulName: function(){
         console.log(this.firstName, this.lastName);
     },
-    chargeBill: function(amount){   
-        this.salary = this.salary - amount;
+    chargeBill: function(amount, tips, tax){   
+        this.salary = this.salary - amount - tips - tax;
         return this.salary;
     }
 }
@@ -45,3 +45,16 @@ const friendlyChargeBill = person.chargeBill.bind(friendlyPerson);
 friendlyChargeBill(1500);
 
 
+//difference between bind, call and apply
+
+person.chargeBill.call(heroPerson, 900);
+person.chargeBill.call(heroPerson, 9900 , 200, 100);
+console.log(heroPerson.salary);
+
+person.chargeBill.call(friendlyPerson, 900, 200, 100);
+console.log(friendlyPerson.salary);
+console.log(person.salary);
+
+person.chargeBill.apply(heroPerson, [300, 300, 30]);
+person.chargeBill.apply(heroPerson, [400, 300, 30]);
+console.log(heroPerson.salary);
