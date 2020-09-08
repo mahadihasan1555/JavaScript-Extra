@@ -8,7 +8,7 @@ const person = {
     getFulName: function(){
         console.log(this.firstName, this.lastName);
     },
-    chargeBill: function(amount, tips, tax){   
+    chargeBill: function(amount, tips, tax){   I
         this.salary = this.salary - amount - tips - tax;
         return this.salary;
     }
